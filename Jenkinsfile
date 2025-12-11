@@ -7,22 +7,20 @@ pipeline {
         maven 'maven3.9.10'
     }
     stages {
-        stage('gitcheckout') {
+        stage('Shiva-GIT') {
             steps {
                 git branch: 'main', url: 'https://github.com/devopsjune2024/dec2025-java.git'
             }
         }
-        stage('maven-check') {
+        stage('Shiva-maven-check') {
             steps {
                sh 'mvn --version'
             }
         }   
 
-        stage('Build') {
+        stage('Shiva-BUILD') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
-                sh 'mvn validate'
-                sh 'mvn install'
             }
         }         
  

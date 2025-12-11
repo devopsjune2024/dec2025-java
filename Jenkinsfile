@@ -7,18 +7,18 @@ pipeline {
         maven 'maven3.9.10'
     }
     stages {
-        stage('gitcheckout') {
+        stage('Manasa_gitcheckout') {
             steps {
                 git branch: 'main', url: 'https://github.com/devopsjune2024/dec2025-java.git'
             }
         }
-        stage('maven-check') {
+        stage('Manasa_maven-check') {
             steps {
                sh 'mvn --version'
             }
         }   
 
-        stage('Build') {
+        stage('Manasa_Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
                 sh 'mvn validate'
@@ -26,7 +26,7 @@ pipeline {
             }
         }         
  
-         stage('Validation') {
+         stage('Manasa_Validation') {
             steps {
                 sh 'mvn validate'
             }

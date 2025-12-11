@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Manasa_gitcheckout') {
             steps {
-                git branch: 'main', url: 'https://github.com/devopsjune2024/dec2025-java.git'
+                git branch: 'Manasa', url: 'https://github.com/devopsjune2024/dec2025-java.git'
             }
         }
         stage('Manasa_maven-check') {

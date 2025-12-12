@@ -26,7 +26,7 @@ pipeline {
             }
         }         
  
-         stage('Manasa_Validation') {
+         stage('December_Validation_Code') {
             steps {
                 sh 'mvn validate'
             }

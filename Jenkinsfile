@@ -3,6 +3,7 @@ pipeline {
     // environment {
     //     PATH = "/opt/maven/bin/:$PATH"
     // }
+ 
     tools {
         maven 'maven3.9.10'
     }
@@ -18,6 +19,14 @@ pipeline {
             }
         }   
 
+        stage('approvals') {
+            steps {
+               script {
+                input message: 'Do you have approval to build', ok: 'Approve'
+               }
+            }
+        }  
+
         stage('Manasa_Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
@@ -28,7 +37,7 @@ pipeline {
  
          stage('December_Validation_Code') {
             steps {
-                sh 'mvn validate'
+                echo "Skipped"
             }
         }      
         

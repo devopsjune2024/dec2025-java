@@ -24,7 +24,7 @@ pipeline {
             }
         }         
  
-         stage('Validation') {
+         stage('SHIVA_PRASAD_Validation') {
             steps {
                 sh 'mvn validate'
             }

@@ -5,7 +5,7 @@
 
   <groupId>com.mycompany.app</groupId>
   <artifactId>my-app</artifactId>
-  <version>V-${BUILD_ID}.0</version>
+  <version>SNAPSHOT-V-${BUILD_ID}.0</version>
 
   <name>my-app</name>
   <!-- FIXME change it to the project's website -->
